@@ -1,0 +1,355 @@
+/*Estilo general*/
+
+* {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #131336;
+    color: #fff;
+    /* original #212139 */
+}
+
+*::selection {
+    background: #33257E;
+    color: #fff;
+}
+
+*::-moz-selection {
+    background: #33257E;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.conten {
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+/*LOGOTIPO*/
+
+.logo {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    width: 40%;
+    vertical-align: top;
+}
+
+/* ROWS N COLUMNS*/
+
+/*Into 'app' class instead generic style*/
+
+.app .row {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col {
+    width: 50%;
+}
+
+/*INPUTS N BUTTONS*/
+
+/*letting back to the generic style*/
+
+.app .btn {
+    width: 100%;
+    background: #5332a1;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .btn:hover {
+    background: #B4A5FF;
+}
+
+.app .btn.false {
+    background: #33257E;
+}
+
+.app label {
+    line-height: 40px;
+}
+
+.app input {
+    text-align: center;
+    border: none;
+}
+
+/*ROW: NUMBER OF CHARACTERS*/
+
+.app .character-number .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .character-number .buttons div {
+    width: 100%;
+}
+
+.app .character-number .buttons div:nth-child(1) button {
+    border-radius: 4px 0 0 4px;
+}
+
+.app .character-number .buttons div:nth-child(3) button {
+    border-radius: 0 4px 4px 0;
+}
+
+.app .character-number input {
+    height: 40px;
+    width: 100%;
+    cursor: default;
+    background: #33257E;
+    color: #fff;
+}
+
+/*ROW: GENERATE PASSWORD*/
+
+.app .row.generate {
+    margin-bottom: 10px;
+}
+
+.app .row.generate .col:nth-child(1) {
+    width: 30%;
+}
+
+.app .row.generate .col:nth-child(2) {
+    width: 65%;
+}
+
+.app .row.generate .btn.btn-generate {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.app .row.generate .btn.btn-generate i {
+    margin-left: 20px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+}
+
+.app .row.generate .btn.btn-generate::after {
+    content: "";
+    display: inline-block;
+    background: #5332a1;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: -7px;
+    transform: rotate(45deg);
+    z-index: 9;
+    transition: all .3s ease;
+}
+
+.app .row.generate .col:nth-child(1):hover .btn-generate:after {
+    background: #B4A5FF;
+}
+
+.app .row.generate .input-password {
+    width: 100%;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .row.generate .input-password:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.app .row.generate input::selection {
+    background: #212139;
+}
+
+.app .row.generate input::-moz-selection {
+    background: #212139;
+}
+
+/*ROW: ALERT!*/
+
+.app .row.alert {
+    justify-content: flex-end;
+}
+
+.app .row.alert .col {
+    width: 65%;
+}
+
+.app .row.alert .alert-copied p,
+.app .row.alert .alert-copied i {
+    text-align: center;
+    color: #131336;
+    transition: all .3s ease;
+    font-size: 12px;
+}
+
+.app .row.alert .alert-copied p::selection,
+.app .row.alert .alert-copied i::selection {
+    background: #131336;
+    color: #131336;
+}
+
+.app .row.alert .alert-copied p::-moz-selection,
+.app .row.alert .alert-copied i::-moz-selection {
+    background: #131336;
+    color: #131336;
+}
+
+/*Active*/
+
+.app .row.alert .alert-copied.active p,
+.app .row.alert .alert-copied.active i {
+    transition: all .3s ease;
+    color: rgba(255, 255, 255, 1);
+}
+
+.app .row.alert .alert-copied.active p::selection,
+.app .row.alert .alert-copied.active i::selection {
+    background: #33257E;
+    color: #fff;
+}
+
+.app .row.alert .alert-copied.active p::-moz-selection,
+.app .row.alert .alert-copied.active i::-moz-selection {
+    background: #33257E;
+    color: #fff;
+}
+
+/*MEDIA QUERIES*/
+
+/*For a responsive design*/
+
+@media screen and (max-width: 500px) {
+    .logo img {
+        width: 70%;
+    }
+    .app .row {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .app .row .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .app .row.generate {
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        padding-top: 40px;
+    }
+    .app .row.generate .col:nth-child(1),
+    .app .row.generate .col:nth-child(2) {
+        width: 100%;
+    }
+    .app .row.generate .btn.btn-generate:after {
+        top: auto;
+        left: 50%;
+        right: 50%;
+        bottom: -7px;
+    }
+}
+
+/*FOOTER*/
+
+.footer {
+    text-align: center;
+}
+
+.footer a,
+p {
+    font-size: 14px;
+    color: rgb(133, 133, 133);
+}
+
+/*FIXME: NAVBAR CLASSES
+*
+*
+*
+*/
+
+.navbar.bg-isotope {
+    background: rgb(241, 111, 92)
+}
+
+.navbar-nav .nav-item a {
+    font-size: 18px;
+    color: azure;
+    font: bold;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: rgba(194, 11, 11, 0.714);
+    transition: all .2s ease;
+}
+
+.navbar .navbar-brand {
+    margin-top: -8px;
+    padding-top: 0;
+    margin-bottom: -8px;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-brand img {
+    background: rgba(194, 11, 11, 0.714);
+    width: 110px;
+    max-width: 150px;
+    height: 110px;
+}
+
+.row.separator {
+    height: 3px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 100;
+    background: #3632ff;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #3632ff 1%, #cc08cc 49%, #ea2528 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #3632ff 1%, #cc08cc 49%, #ea2528 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #3632ff 1%, #cc08cc 49%, #ea2528 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3632ff', endColorstr='#ea2528', GradientType=1);
+    /* IE6-9 */
+}

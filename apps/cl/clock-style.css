@@ -35,10 +35,6 @@ a {
     transition: all .2s ease;
 }
 
-.navbar {
-    
-}
-
 .navbar .navbar-brand {
     margin-top: -8px;
     padding-top: 0;
@@ -59,6 +55,7 @@ a {
     margin: 0;
     padding: 0;
     position: fixed;
+    z-index: 100;
     background: #3632ff;
     /* Old browsers */
     background: -moz-linear-gradient(left, #3632ff 1%, #cc08cc 49%, #ea2528 100%);

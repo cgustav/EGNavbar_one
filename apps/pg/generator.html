@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <!--Related-->
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" title="unified" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/fontawesome/css/all.min.css" title="unified" />
+    <!--Custom-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" type="text/css" media="screen" href="psw-style.css" title="unified" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-isotope navbar-expand-md navbar-toggeable-sm sticky-top">
+        <!--LOG:ON-->
+        <a class="navbar-brand" href="/index.html">
+            <img class="img-logon" src="/img/logo-idea.png" alt="Website logo">
+        </a>
+        <!-- Toggler/collapsibe Button -->
+        <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#collapsibleNavbar"
+            aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--beggining of the collapse content-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!--LIST OF LINKS-->
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Applications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">List of links</a>
+                </li>
+            </ul>
+            <!--end of collapsible content-->
+        </div>
+    
+        <!--END:NAV-->
+    </nav>
+    <div class="row separator sticky-bottom"></div>
+    <!--contenedor para centrar todo el contenido-->
+    <div class="conten">
+        <!--contenedor para el logotipo del generador-->
+        <div class="logo">
+            <div class="col">
+                <a href="/index.html">
+                    <img src="/img/psswrding.png" alt="Password Generator">
+                </a>
+            </div>
+            <div class="col">
+                <img src="/img/twelve.png" alt="Password Generator">
+            </div>
+            <!--
+            <div class="col">
+                <img src="/img/cropped-logo.png" alt="Password Type">
+            </div>
+            -->
+        </div>
+        <!--Utilizaremos el class del formulario para añadirle hoja de estilo y el id para relacionarlo dentro del documento para js-->
+        <form action="" class="app" id="app">
+            <div class="row character-number">
+                <div class="col">
+                    <label for="character-number">Number of characters:</label>
+                </div>
+                <div class="col buttons">
+                    <div>
+                        <button class="btn" id="btn-minus-one">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                    <div>
+                        <input type="text" id="character-number" readonly value="12">
+                    </div>
+                    <div>
+                        <button class="btn" id="btn-plus-one">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row symbol">
+                <div class="col">
+                    <label for="symbol">Include Symbols?</label>
+                </div>
+                <div class="col">
+                    <button class="btn" id="btn-symbol">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row number">
+                <div class="col">
+                    <label for="number" class="number-count">Include Numbers?</label>
+                </div>
+                <div class="col">
+                    <button class="btn" id="btn-number">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row capital-letter">
+                <div class="col">
+                    <label for="capital-letter">Include Capital Letters?</label>
+                </div>
+                <div class="col">
+                    <button class="btn btn-capital-letter" id="btn-capital-letter">
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row generate">
+                <div class="col">
+                    <button class="btn btn-generate" id="btn-generate">Generate
+                        <i class="fas fa-lock"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <input type="text" class="input-password" id="input-password" readonly value="F_$4e()ER4">
+                </div>
+            </div>
+
+            <div class="row alert">
+                <div class="col">
+                    <div class="alert-copied" id="alert-copied">
+                        <p><i class="fas fa-copy"></i> Copied Text!</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <div class="footer">
+            <p>Eduardo Munoz All Rights Reserved ;)</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
