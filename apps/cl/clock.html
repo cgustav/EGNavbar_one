@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Real time clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="clock-style.css" title="alter" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css" title="alter" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-isotope navbar-expand-md navbar-toggeable-sm sticky-top">
+        <!--LOG:ON-->
+        <a class="navbar-brand" href="/index.html">
+            <img class="img-logon" src="/img/logo-idea.png" alt="Website logo">
+        </a>
+        <!-- Toggler/collapsibe Button -->
+        <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#collapsibleNavbar"
+            aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--beggining of the collapse content-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!--LIST OF LINKS-->
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Applications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">List of links</a>
+                </li>
+            </ul>
+            <!--end of collapsible content-->
+        </div>
+
+        <!--END:NAV-->
+    </nav>
+    <div class="row separator sticky-bottom"></div>
+    <!--BEGGINING CARDS -->
+    <div class="wrap">
+        <!--Using this dive to center the whole application-->
+        <div class="widget">
+            <!--Means the clock widget-->
+            <div class="date">
+                <p class="weekDay" id="weekDay"></p>
+                <p>:</p>
+                <p class="month" id="month"></p>
+                <p class="day" id="day"></p>
+                <p>,</p>
+                <p class="year" id="year"></p>
+            </div>
+            <!--Clock structure-->
+            <div class="clock">
+                <p class="hours" id="hours"></p>
+                <p>:</p>
+                <p class="minutes" id="minutes"></p>
+                <p>:</p>
+                <div class="seconds-box">
+                    <p class="amPm" id="amPm"></p>
+                    <p class="seconds" id="seconds"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="clockwork.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+</html>
